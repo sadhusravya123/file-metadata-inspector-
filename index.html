@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MetaView - File Metadata Inspector</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📂 MetaView</h1>
+
+<p>Inspect Images & PDFs with detailed metadata.</p>
+
+<div class="upload" id="dropArea">
+
+<input
+type="file"
+id="fileInput"
+accept="image/*,.pdf">
+
+<p>📤 Drag & Drop or Choose a File</p>
+
+</div>
+
+<div class="preview">
+
+<img id="imagePreview">
+
+<canvas id="pdfPreview"></canvas>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h2>General</h2>
+
+<p id="name">Name : -</p>
+
+<p id="size">Size : -</p>
+
+<p id="type">Type : -</p>
+
+<p id="modified">Modified : -</p>
+
+</div>
+
+<div class="card">
+
+<h2>Image Metadata</h2>
+
+<p id="dimension">Dimensions : -</p>
+
+<p id="camera">Camera : -</p>
+
+<p id="date">Captured : -</p>
+
+<p id="gps">GPS : -</p>
+
+</div>
+
+<div class="card">
+
+<h2>PDF Metadata</h2>
+
+<p id="pages">Pages : -</p>
+
+<p id="author">Author : -</p>
+
+<p id="creator">Creator : -</p>
+
+<p id="title">Title : -</p>
+
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button id="copyBtn">
+
+Copy Metadata
+
+</button>
+
+<button id="downloadBtn">
+
+Download JSON
+
+</button>
+
+<button id="themeBtn">
+
+🌙 Dark Mode
+
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
