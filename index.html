@@ -15,6 +15,11 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
+<script>
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+"https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+</script>
+
 </head>
 
 <body>
@@ -38,7 +43,7 @@ accept="image/*,.pdf">
 
 <div class="preview">
 
-<img id="imagePreview">
+<img id="imagePreview" alt="Image Preview">
 
 <canvas id="pdfPreview"></canvas>
 
@@ -48,7 +53,7 @@ accept="image/*,.pdf">
 
 <div class="card">
 
-<h2>General</h2>
+<h2>📄 General</h2>
 
 <p id="name">Name : -</p>
 
@@ -62,7 +67,7 @@ accept="image/*,.pdf">
 
 <div class="card">
 
-<h2>Image Metadata</h2>
+<h2>📷 Image Metadata</h2>
 
 <p id="dimension">Dimensions : -</p>
 
@@ -76,7 +81,7 @@ accept="image/*,.pdf">
 
 <div class="card">
 
-<h2>PDF Metadata</h2>
+<h2>📕 PDF Metadata</h2>
 
 <p id="pages">Pages : -</p>
 
@@ -93,21 +98,15 @@ accept="image/*,.pdf">
 <div class="buttons">
 
 <button id="copyBtn">
-
-Copy Metadata
-
+📋 Copy Metadata
 </button>
 
 <button id="downloadBtn">
-
-Download JSON
-
+⬇ Download JSON
 </button>
 
 <button id="themeBtn">
-
 🌙 Dark Mode
-
 </button>
 
 </div>
